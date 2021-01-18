@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(236, 229, 216);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.content h2{
+    text-align: center;
+    font-size: 2.1em;
+
+}
+
+.container{
+    background: rgba(196, 186, 186, 0.26);
+    width: 100%;
+    max-width: auto;
+
+
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.container ul li{
+    list-style-type: none;
+    width: auto;
+    background-color: rgb(73, 30, 30);;
+    padding: 5px;
+    float: left;
+    left: 0;
+    margin-top: 7px;
+}
+
+.container ul li a{
+    padding: 10px;
+    margin: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.container ul li a:hover{
+    color: tomato;
+}
+
+.container .header,
+.container .content,
+.container .sidebar,
+.container .footer,
+.container div {
+    padding: 20px;
+
+}
+
+.container .content,
+.container div{
+    margin: 20px ;
+}
+
+.container .header,
+.container .footer {
+    grid-column: 1/6;
+    background: rgb(73, 30, 30);
+    color: white;
+}
+
+.container .footer{
+    text-align: center;
+    padding: 30px;
+}
+
+.container .content{
+    grid-column: span 3;
+}
+
+.content .article h1,
+.content .article p{
+    padding: 7px;
+    
+}
+
+.content .article{
+    background: rgb(189, 177, 180);
+    margin-top: 7px;
+    padding: 9px;
+}
+
+.content .article h3{
+    text-align: center;
+}
+
+.content .article img{
+    float: left;
+    margin-right: 14px;
+    margin-top: 14px;
+    width: 300px; height: 250px;
+}
+
+.content .article .part2{
+    float: left;
+    margin-right: 14px;
+    margin-top: 14px;
+    width: 360px; height: 250px;
+}
+
+.container .sidebar{
+    grid-column: span 2;
+    background: rgb(105, 51, 51);
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 600px;
+
+}
+
+
+.container .sidebar a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.content .article h2{
+    text-align: center;
+}
+
+.container .sugerencia{
+    background: cyan;
+    width: 50%;
+    height: 200px;
+    position: relative;
+    left: 30px;
+    transition-delay: 0.2s;
+    transition: all 0.5s ease;
+}
+
+.container .sugerencia:hover{
+    width: 300px;
+    cursor: pointer;
+    color: black;
+    background: white;
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        text-align: center;
+    }
+
+    .container .content{
+        grid-column: 1/-1;
+    }
+
+    .container .sidebar{
+        grid-column: 1/6;
+    }
+    
+    .container .pubrelacionada{
+        grid-column: 1/-1;
+    }
+}
